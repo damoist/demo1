@@ -11,6 +11,7 @@ step "run-a-script" {
             Octopus.Action.Script.ScriptBody = <<-EOT
                 write-host $env:COMPUTERNAME
                 Get-Date -Format "MM/dd/yyyy hh:mm:ss tt"
+                Get-CimInstance
                 EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
